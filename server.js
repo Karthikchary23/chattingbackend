@@ -3,7 +3,7 @@ import cors from "cors";
 import connectDB from "./database/page.js";
 import usermodel from "./models/Userschema.js";
 import Message from "./models/Message.js";
-import bcrypt from "bcryptjs";
+import bcrypt from 'bcryptjs';
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
