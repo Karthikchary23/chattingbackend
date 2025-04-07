@@ -20,7 +20,7 @@ const PORT = 5000;
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: "https://chattingbackend-79ur.onrender.com",
+  origin: "https://blyndchat.vercel.app",
   credentials: true,
 }));
 app.use(cookieParser());
@@ -30,7 +30,7 @@ connectDB();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://chattingbackend-79ur.onrender.com",
+    origin: "https://blyndchat.vercel.app",
     methods: ["GET", "POST"],
     credentials: true,
   },
