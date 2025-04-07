@@ -25,14 +25,12 @@ app.use(cors({
 }));
 app.use(cookieParser());
 
-// Connect to MongoDB
 connectDB();
 
-// Create HTTP server and integrate Socket.IO
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://chattingbackend-79ur.onrender.com",
     methods: ["GET", "POST"],
     credentials: true,
   },
@@ -43,8 +41,8 @@ const io = new Server(server, {
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.EMAIL_USER, // Use env variable
-    pass: process.env.EMAIL_PASS, // Use env variable (App Password for Gmail)
+    user: process.env.EMAIL_USER, 
+    pass: process.env.EMAIL_PASS, 
   },
 });
 
